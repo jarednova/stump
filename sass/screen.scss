@@ -1,0 +1,153 @@
+@import "upbase/base";
+@import "upbase/layout";
+@import "upbase/mixins";
+@import "upbase/normalize";
+@import "upbase/reset";
+@import "variables";
+
+a {
+	color:$orange;
+	text-decoration:none;
+	&:hover {
+		color:darken($yellow, 10);
+	}
+	&:visited {
+		color:$orange;
+	}
+}
+
+.header-logo-link {
+	max-width:100%;
+	width:100%;
+}
+
+.header-logo-img {
+	max-width:100%;
+	width:100%;
+}
+
+#menu-all-pages {
+	@include pie-clearfix;
+	li {
+		width:25%;
+		float:left;
+		text-align:center;
+		border-right:1px solid darken($yellow, 10);
+		a {
+			padding:10px;
+			text-align:center;
+			color:black(100);
+			font-size:16px;
+			text-transform:uppercase;
+			display:block;
+			@media(min-width:650px){
+				padding-top:30px;
+				padding-bottom:30px;
+			}
+			&:hover {
+				background-color:black;
+				color:white;
+			}
+		}
+	}
+}
+
+.header {
+	background-color:$yellow;
+	.wrapper {
+		@media (min-width:650px){
+			@include cols(2, 40%, 60%);
+		}
+	}
+}
+
+body {
+	font-family:$titillium;
+}
+
+.h1, .h1, .h3, .h4 {
+	font-family:$titillium;
+}
+
+.h3 {
+	text-transform:uppercase;
+	font-size:18px;
+	font-weight:900;
+}
+
+#respond {
+	padding:20px;
+	background-color:black(5);
+	border:1px solid black(10);
+}
+
+.article-h1 {
+	font-family:$titillium;
+	font-size:24px;
+	margin-bottom:15px;
+	@media (min-width:650px) {
+		font-size:48px;
+	}
+}
+
+.article-body {
+	font-size:16px;
+	line-height:120%;
+	margin-bottom:80px;
+}
+
+.blog-author {
+	margin-bottom:20px;
+}
+
+.content-wrapper {
+	margin:auto;
+	width:90%;
+}
+
+.post {
+	padding-top:50px;
+}
+
+.tease {
+	margin-bottom:5px;
+	padding:30px 0px;
+	border-bottom:1px solid black(10);
+	.h2 {
+		font-size:24px;
+		margin-bottom:10px;
+		a {
+			color:black;
+		}
+	}
+	img {
+		max-width:100%;
+	}
+	.tease-body {
+		font-size:16px;
+		line-height:150%;
+	}
+	.tease-thumb {
+		border:1px solid black(10);
+		margin-bottom:20px;
+	}
+
+}
+
+#content {
+	padding-top:40px;
+	padding-bottom:80px;
+}
+
+.footer {
+	padding:20px;
+	background-color:black;
+	color:white;
+	text-align:center;
+}
+
+.blog-comment {
+	@include cols(2, 30%, 70%);
+	border-bottom:1px solid black(10);
+	padding:20px 10px;
+}
